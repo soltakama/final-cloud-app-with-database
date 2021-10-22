@@ -81,7 +81,7 @@
 
             
             <form id="questionform" action="point to a submit view" method="post">
-                        ... for each question in the course ...
+                        {% for question in question_list %}}
                         <div class="card mt-1">
                             <div class="card-header"><h5>{{ question.question_text}}</h5></div>
                             {% csrf_token %}
@@ -96,6 +96,7 @@
                                 </div>
                             </div>
                         </div>
+                        {% endfor %}
                     <input class="btn btn-success btn-block" type="submit" value="Submit">
             </form>
 
